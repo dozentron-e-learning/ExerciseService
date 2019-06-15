@@ -1,6 +1,6 @@
 development:
   clients:
     default:
-      database: mongoid
+      database: dozentron_exercise_development
       hosts:
         - localhost:27017
