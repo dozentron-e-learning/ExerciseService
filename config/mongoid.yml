@@ -4,3 +4,10 @@ development:
       database: dozentron_exercise_development
       hosts:
         - localhost:27017
+
+test:
+  clients:
+    default:
+      database: dozentron_exercise_development
+      hosts:
+        - localhost:27017

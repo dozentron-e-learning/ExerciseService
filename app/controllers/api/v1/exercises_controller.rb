@@ -1,5 +1,5 @@
 class Api::V1::ExercisesController < ApplicationController
-  before_action :set_api_v1_exercise, only: [:show, :update, :destroy]
+  before_action :set_api_v1_exercise, only: %i[show update destroy download download_hidden download_stub]
 
   # GET /api/v1/exercises
   def index
@@ -36,6 +36,18 @@ class Api::V1::ExercisesController < ApplicationController
   # DELETE /api/v1/exercises/1
   def destroy
     @api_v1_exercise.destroy
+  end
+
+  def download
+    send_file @api_v1_exercise.exercise_test.path
+  end
+
+  def download_hidden
+    send_file @api_v1_exercise.exercise_hidden_test.path
+  end
+
+  def download_stub
+    send_file @api_v1_exercise.exercise_stub.path
   end
 
   private
