@@ -2,6 +2,8 @@ class Api::V1::Exercise
   include Mongoid::Document
   include Mongoid::Paperclip
 
+  after_create { |obj| ExercisePublisher.new.create obj }
+
   VALIDATION_NOT_PERFORMED = :not_performed
   VALIDATION_SUCCEEDED = :succeeded
   VALIDATION_FAILED = :failed

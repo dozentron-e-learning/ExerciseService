@@ -1,3 +1,11 @@
+GIT
+  remote: https://git.thm.de/ss2019-masterarbeit-gildamesh/activebunny.git
+  revision: 8ffbcfe13bf529827ddd416d01f03a727c51352c
+  specs:
+    activebunny (0.1.0)
+      activesupport (>= 5.0, < 7)
+      bunny (~> 2.14)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,11 +64,14 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.4)
+    amq-protocol (2.3.0)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     bson (4.5.0)
     bson_ext (1.5.1)
     builder (3.2.3)
+    bunny (2.14.2)
+      amq-protocol (~> 2.3, >= 2.3.0)
     byebug (11.0.1)
     climate_control (0.2.0)
     concurrent-ruby (1.1.5)
@@ -170,6 +181,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activebunny!
   bootsnap (>= 1.4.2)
   bson_ext
   byebug
