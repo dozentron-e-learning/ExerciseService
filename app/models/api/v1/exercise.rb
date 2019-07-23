@@ -15,6 +15,7 @@ class Api::V1::Exercise
     exercise_test
     exercise_hidden_test
     exercise_stub
+    tests
     validation_status
     test_validation_error
     hidden_test_validation_error
@@ -36,6 +37,7 @@ class Api::V1::Exercise
   field :deadline, type: Date
   field :visible_date, type: Date
   field :do_plagiarism_check, type: Boolean, default: false
+  field :tests, type: Hash, default: {}
   field :validation_status, type: Symbol, default: VALIDATION_NOT_PERFORMED
   field :test_validation_error, type: String
   field :hidden_test_validation_error, type: String
