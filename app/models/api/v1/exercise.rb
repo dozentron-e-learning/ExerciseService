@@ -8,6 +8,8 @@ class Api::V1::Exercise
   VALIDATION_SUCCEEDED = :succeeded
   VALIDATION_FAILED = :failed
 
+  # can't add tests because it needs to be added as tests: {}
+  # for it to allow the hash
   STRONG_PARAMETERS = %i[
     title
     description
@@ -17,7 +19,6 @@ class Api::V1::Exercise
     exercise_test
     exercise_hidden_test
     exercise_stub
-    tests
     validation_status
     test_validation_error
     hidden_test_validation_error

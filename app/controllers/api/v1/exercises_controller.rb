@@ -58,6 +58,6 @@ class Api::V1::ExercisesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def api_v1_exercise_params
-      params.fetch(:api_v1_exercise, {}).permit *Api::V1::Exercise::STRONG_PARAMETERS
+      params.fetch(:api_v1_exercise, {}).permit *Api::V1::Exercise::STRONG_PARAMETERS, tests: {} #I had to put tests extra
     end
 end
