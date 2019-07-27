@@ -27,9 +27,9 @@ class Api::V1::Exercise
     general_validation_error_details
   ].freeze
 
-  has_mongoid_attached_file :exercise_test
-  has_mongoid_attached_file :exercise_hidden_test
-  has_mongoid_attached_file :exercise_stub
+  has_mongoid_attached_file :exercise_test, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
+  has_mongoid_attached_file :exercise_hidden_test, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
+  has_mongoid_attached_file :exercise_stub, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
 
   do_not_validate_attachment_file_type :exercise_test
   do_not_validate_attachment_file_type :exercise_hidden_test
