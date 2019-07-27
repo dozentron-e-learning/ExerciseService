@@ -11,3 +11,10 @@ test:
       database: dozentron_exercise_development
       hosts:
         - localhost:27017
+
+production:
+  clients:
+    default:
+      database: dozentron_exercise_production
+      hosts:
+        - localhost:27017
