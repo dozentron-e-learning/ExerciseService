@@ -17,4 +17,4 @@ production:
     default:
       database: dozentron_exercise_production
       hosts:
-        - localhost:27017
+        - <%= ENV['MONGO_HOST'] %>

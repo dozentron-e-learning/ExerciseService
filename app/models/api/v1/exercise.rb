@@ -1,6 +1,5 @@
 class Api::V1::Exercise
   include Mongoid::Document
-  include Mongoid::Paperclip
 
   after_create { |obj| ExercisePublisher.new.create obj }
 
@@ -27,13 +26,9 @@ class Api::V1::Exercise
     general_validation_error_details
   ].freeze
 
-  has_mongoid_attached_file :exercise_test, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
-  has_mongoid_attached_file :exercise_hidden_test, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
-  has_mongoid_attached_file :exercise_stub, path: ':rails_root/private/:class/:attachment/:id_partition/:style/:filename'
-
-  do_not_validate_attachment_file_type :exercise_test
-  do_not_validate_attachment_file_type :exercise_hidden_test
-  do_not_validate_attachment_file_type :exercise_stub
+  mount_uploader :exercise_test, ExerciseUploader
+  mount_uploader :exercise_hidden_test, ExerciseUploader
+  mount_uploader :exercise_stub, ExerciseUploader
 
   field :title, type: String
   field :description, type: String

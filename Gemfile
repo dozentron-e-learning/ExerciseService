@@ -40,7 +40,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mongoid'
 gem 'bson_ext'
 
-gem "mongoid-paperclip"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 # Messaging
 gem 'activebunny', thm_git: 'ss2019-masterarbeit-gildamesh/activebunny'
