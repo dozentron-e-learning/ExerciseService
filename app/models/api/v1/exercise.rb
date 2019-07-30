@@ -4,7 +4,7 @@ class Api::V1::Exercise
   after_create { |obj| ExercisePublisher.new.create obj }
 
   VALIDATION_NOT_PERFORMED = :not_performed
-  VALIDATION_SUCCEEDED = :succeeded
+  VALIDATION_SUCCEEDED = :success
   VALIDATION_FAILED = :failed
 
   # can't add tests because it needs to be added as tests: {}

@@ -43,4 +43,4 @@ gem 'bson_ext'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 # Messaging
-gem 'activebunny', thm_git: 'ss2019-masterarbeit-gildamesh/activebunny'
+gem 'activebunny', thm_git: 'dalt40/activebunny'
