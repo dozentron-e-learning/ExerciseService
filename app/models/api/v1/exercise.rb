@@ -1,5 +1,6 @@
 class Api::V1::Exercise
   include Mongoid::Document
+  include Mongoid::Attributes::Dynamic
 
   after_create { |obj| ExercisePublisher.new.create obj }
 
