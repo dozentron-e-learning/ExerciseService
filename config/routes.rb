@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :exercises do
         member do
+          patch 'validation'
           get 'download'
           get 'download_hidden'
           get 'download_stub'

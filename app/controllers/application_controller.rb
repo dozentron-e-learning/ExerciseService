@@ -5,6 +5,10 @@ class ApplicationController < ActionController::API
 
   after_action :reset_header
 
+  def current_ability
+    @current_ability ||= Ability.new(current_user, @jwt)
+  end
+
   private
 
   def authenticate_test

@@ -34,5 +34,6 @@ module ExerciseService
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.jwt = config_for 'jwt'
+    config.service_urls = config_for 'service_urls'
   end
 end

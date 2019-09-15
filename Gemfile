@@ -45,7 +45,11 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 # Messaging
 gem 'activebunny', thm_git: 'dalt40/activebunny'
 
+# Rest interaction
+gem 'rest-client'
+
 # Authorization
 gem 'activeresource', '~> 5.1'
+gem 'cancancan'
 gem 'enumerize', '~> 2.3'
 gem 'jwt', '~> 2.2'
